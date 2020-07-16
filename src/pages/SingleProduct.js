@@ -29,7 +29,7 @@ export default class SingleProduct extends Component {
   }
 
   render() {
-    const { _id, description, name, price, url } = this.state.product;
+    const { description, name, price, url } = this.state.product;
 
     if (this.state.loading) {
       return (

@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import ProductList from "../components/ProductList";
 import Search from "../components/Search";
-import firebase from "firebase/app";
 import axios from "axios";
 export default class Products extends Component {
   state = {
@@ -22,34 +21,6 @@ export default class Products extends Component {
     filteredProducts: [],
     price: 0,
   };
-
-  // getImages = () => {
-  //   const storage = firebase.storage().ref();
-  //   storage
-  //     .child(`images/`)
-  //     .listAll()
-  //     .then((images) => {
-  //       images.items.forEach((item) => {
-  //         this.getImgUrl(item);
-  //       });
-  //     })
-  //     .catch((error) => {
-  //       console.log(error);
-  //     });
-  // };
-
-  // getImgUrl = (imageRef) => {
-  //   imageRef
-  //     .getDownloadURL()
-  //     .then((url) => {
-  //       this.setState({
-  //         imagesUrl: [this.state.imagesUrl, url],
-  //       });
-  //     })
-  //     .catch((error) => {
-  //       console.log(error);
-  //     });
-  // };
 
   getProductData = () => {
     axios
@@ -105,6 +76,7 @@ export default class Products extends Component {
         if (tempSearch === tempTitle) {
           return item;
         }
+        return null;
       });
     }
     this.setState({

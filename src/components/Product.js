@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 export default class Product extends Component {
   render() {
-    const { _id, url, name, description, price } = this.props.product;
+    const { _id, url, name, price } = this.props.product;
 
     return (
       <div className="col-10 mx-auto col-md-6 col-lg-4 my-3">

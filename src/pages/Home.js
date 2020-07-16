@@ -1,10 +1,7 @@
 import React, { Component } from "react";
 import Header from "../components/Header";
 import { Link } from "react-router-dom";
-import axios from "axios";
-import UploadImage from "../components/UploadImage";
 
-import firebase from "firebase/app";
 import "firebase/storage";
 
 export default class Home extends Component {

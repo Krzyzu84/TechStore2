@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 export default class Search extends Component {
   render() {
-    const { handleChange, handleSubmit, search, price } = this.props;
+    const { handleChange, search, price } = this.props;
     return (
       <div className="container">
         <div className="row">

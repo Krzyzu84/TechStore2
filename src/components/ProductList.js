@@ -2,14 +2,9 @@ import React, { Component } from "react";
 import Product from "./Product";
 export default class ProductList extends Component {
   render() {
-    const { products: products, filteredProducts, filtered } = this.props;
+    const { products, filteredProducts, filtered } = this.props;
 
     let displayProducts = filtered ? filteredProducts : products;
-
-    let test = null;
-    if (filtered) {
-      test = "mleko";
-    }
 
     return (
       <>
